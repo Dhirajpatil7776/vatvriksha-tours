@@ -1,0 +1,56 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact | Vatvriksha Tours</title>
+<meta name="description" content="Vatvriksha Tours - premium travel packages from Pune to Gokarna, Malvan, Ujjain and more.">
+<link rel="icon" href="assets/images/logo.jpg"><link rel="stylesheet" href="css/style.css">
+</head><body>
+<header class="nav"><div class="container nav-inner">
+<a class="brand" href="index.html"><img src="assets/images/logo.jpg" alt="Vatvriksha Tours logo"><span>Vatvriksha Tours</span></a>
+<button class="mobile-toggle" aria-label="Menu">☰</button>
+<nav class="menu">
+<a href="index.html">Home</a><a href="packages.html">Packages</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+<a class="btn btn-primary" href="contact.html">Enquire Now</a>
+</nav></div></header>
+
+<main><section class="package-hero"><div class="container"><div class="eyebrow">Let's plan</div><h1>Contact & Enquiry</h1><p>Tell us where you want to go.</p></div></section>
+<section class="section"><div class="container contact">
+<div><div class="contact-list">
+<div class="contact-item"><small>Call / WhatsApp</small><b><a href="tel:+919922770419">+91 99227 70419</a></b></div>
+<div class="contact-item"><small>Email</small><b><a href="mailto:vatavrikshatours@gmail.com">vatavrikshatours@gmail.com</a></b></div>
+<div class="contact-item"><small>Location</small><b>Navale Bridge, Pune</b></div>
+<div class="contact-item"><small>Instagram</small><b><a href="https://www.instagram.com/vatavriksha_tours/" target="_blank">@vatavriksha_tours</a></b></div>
+</div></div>
+<div class="panel"><h3>Send an Enquiry</h3>
+<form class="form" id="enquiryForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<input name="name" required placeholder="Full Name"><input name="phone" required placeholder="Mobile Number" type="tel">
+<input name="email" placeholder="Email" type="email">
+<select name="package" required id="packageSelect"><option value="">Select Package</option></select>
+<input name="travellers" placeholder="Number of Travellers" type="number" min="1">
+<input name="date" placeholder="Preferred Travel Date" type="date">
+<textarea name="message" placeholder="Message / requirements"></textarea>
+<button class="btn btn-primary" type="submit">Submit Enquiry</button>
+<p id="formNote" class="meta">For the email form to work, replace YOUR_FORM_ID with your free Formspree form ID. WhatsApp enquiry works immediately.</p>
+</form>
+</div></div></section></main>
+
+<footer class="footer"><div class="container footer-grid">
+<div><img src="assets/images/logo.jpg" alt="Vatvriksha Tours" style="width:90px"><h3>Vatvriksha Tours</h3><p>Explore. Experience. Remember. Curated journeys from Pune to unforgettable destinations.</p></div>
+<div><h3>Quick Links</h3><p><a href="packages.html">Packages</a><br><a href="gallery.html">Gallery</a><br><a href="about.html">About Us</a><br><a href="contact.html">Contact</a></p></div>
+<div><h3>Contact</h3><p>Navale Bridge, Pune<br>📞 9922770419<br>✉️ vatavrikshatours@gmail.com<br><a href="https://www.instagram.com/vatavriksha_tours/" target="_blank">Instagram</a></p></div>
+</div><div class="container" style="margin-top:28px;border-top:1px solid rgba(255,255,255,.08);padding-top:20px">© <span id="year"></span> Vatvriksha Tours. All Rights Reserved.</div></footer>
+<a class="float-wa" data-wa="Vatvriksha Tours" aria-label="WhatsApp" title="WhatsApp">◉</a>
+<script src="js/packages.js"></script><script src="js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+ const s=document.querySelector("#packageSelect"); packages.forEach(p=>s.insertAdjacentHTML("beforeend",`<option>${p.name}</option>`));
+ const f=document.querySelector("#enquiryForm"); f.addEventListener("submit",e=>{
+   if(f.action.includes("YOUR_FORM_ID")){
+     e.preventDefault();
+     const name=f.name.value, pkg=f.package.value, msg=f.message.value;
+     window.open(waMessage(pkg)+`&text=${encodeURIComponent("Hi Vatvriksha Tours, I am "+name+". I am interested in "+pkg+". "+msg)}`,"_blank");
+     document.querySelector("#formNote").textContent="Your WhatsApp enquiry is being opened. Please send the message to our team.";
+   }
+ });
+});
+</script>
+</body></html>

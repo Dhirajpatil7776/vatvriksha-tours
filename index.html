@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home | Vatvriksha Tours</title>
+<meta name="description" content="Vatvriksha Tours - premium travel packages from Pune to Gokarna, Malvan, Ujjain and more.">
+<link rel="icon" href="assets/images/logo.jpg"><link rel="stylesheet" href="css/style.css">
+</head><body>
+<header class="nav"><div class="container nav-inner">
+<a class="brand" href="index.html"><img src="assets/images/logo.jpg" alt="Vatvriksha Tours logo"><span>Vatvriksha Tours</span></a>
+<button class="mobile-toggle" aria-label="Menu">☰</button>
+<nav class="menu">
+<a href="index.html">Home</a><a href="packages.html">Packages</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a>
+<a class="btn btn-primary" href="contact.html">Enquire Now</a>
+</nav></div></header>
+
+<main>
+<section class="hero"><div class="container hero-content">
+<div class="eyebrow">Vatvriksha Tours • Pune</div>
+<h1>Your next adventure starts here.</h1>
+<p>Premium, cinematic and memorable journeys from Pune to beaches, temples, mountains and beyond.</p>
+<div class="actions"><a class="btn btn-primary" href="packages.html">Explore Packages</a><a class="btn btn-outline" data-wa="Vatvriksha Tours">WhatsApp Us</a></div>
+</div></section>
+<section class="section"><div class="container">
+<div class="section-head"><div><div class="eyebrow">Travel better</div><h2>Popular Packages</h2></div><p>Choose your next escape and enquire directly with our travel team.</p></div>
+<div class="grid" id="homePackages"></div>
+</div></section>
+<section class="section" style="padding-top:0"><div class="container"><div class="banner"><img src="assets/images/gokarna-banner.jpg" alt="Gokarna Murudeshwar backpacking trip"></div></div></section>
+<section class="section"><div class="container"><div class="section-head"><div><div class="eyebrow">Why us</div><h2>Travel with confidence</h2></div></div>
+<div class="feature-grid"><div class="feature">🚌 <b>Comfortable Travel</b><span>Thoughtfully planned journeys from Pune.</span></div><div class="feature">🗺️ <b>Planned Experiences</b><span>Itineraries designed around memorable places.</span></div><div class="feature">💰 <b>Value Packages</b><span>Clear pricing and transparent inclusions.</span></div><div class="feature">🤝 <b>Travel Support</b><span>Easy WhatsApp and enquiry support.</span></div></div>
+</div></section>
+<section class="section" style="padding-top:0"><div class="container"><div class="about-box"><div class="eyebrow">Vatvriksha Tours</div><h2>Pack your bag. Leave the routine. Chase the journey.</h2><p>From coastal road trips to spiritual getaways, we bring people together for experiences worth remembering.</p><a class="btn btn-primary" href="contact.html">Plan My Trip</a></div></div></section>
+</main>
+
+<footer class="footer"><div class="container footer-grid">
+<div><img src="assets/images/logo.jpg" alt="Vatvriksha Tours" style="width:90px"><h3>Vatvriksha Tours</h3><p>Explore. Experience. Remember. Curated journeys from Pune to unforgettable destinations.</p></div>
+<div><h3>Quick Links</h3><p><a href="packages.html">Packages</a><br><a href="gallery.html">Gallery</a><br><a href="about.html">About Us</a><br><a href="contact.html">Contact</a></p></div>
+<div><h3>Contact</h3><p>Navale Bridge, Pune<br>📞 9922770419<br>✉️ vatavrikshatours@gmail.com<br><a href="https://www.instagram.com/vatavriksha_tours/" target="_blank">Instagram</a></p></div>
+</div><div class="container" style="margin-top:28px;border-top:1px solid rgba(255,255,255,.08);padding-top:20px">© <span id="year"></span> Vatvriksha Tours. All Rights Reserved.</div></footer>
+<a class="float-wa" data-wa="Vatvriksha Tours" aria-label="WhatsApp" title="WhatsApp">◉</a>
+<script src="js/packages.js"></script><script src="js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+ const el=document.querySelector("#homePackages");
+ packages.forEach(p=>el.insertAdjacentHTML("beforeend",`<article class="card"><img class="card-img" src="${p.image}" alt="${p.name}"><div class="card-body"><div class="route">${p.name}</div><h3>${p.price}</h3><div class="meta">${p.duration} • ${p.places}</div><p>${p.description}</p><div class="card-actions"><a class="btn btn-primary" href="package.html?id=${p.id}">View Trip</a><a class="btn btn-outline" data-wa="${p.name}">Enquire</a></div></div></article>`));
+ setWhatsAppLinks();
+});
+</script>
+</body></html>
